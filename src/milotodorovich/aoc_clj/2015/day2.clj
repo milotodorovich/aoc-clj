@@ -31,7 +31,10 @@
     (+ (volume l w h) (min p1 p2 p3))))
 
 (defn -main [& _]
-  (let [data (str/split (slurp (io/resource "2015/day2.txt")) #"\n")]
+  (let [data (-> "2015/day2.txt"
+                 (io/resource)
+                 (slurp)
+                 (str/split #"\n"))]
     (println "Solving 2015 day 2.")
     (println (->> data
                   (map part-1)
