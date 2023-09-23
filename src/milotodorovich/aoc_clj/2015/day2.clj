@@ -2,26 +2,33 @@
   (:require [clojure.java.io :as io]
             [clojure.string :as str]))
 
+(defn input->dimensions [input]
+  (->> (str/split input #"x")
+       (map #(Integer/parseInt %))))
+
+(defn area [a b]
+  (* a b))
+
+(defn perimeter [a b]
+  (+ a a b b))
+
+(defn volume [a b c]
+  (* a b c))
+
 (defn part-1 [input]
-  (let [dims (str/split input #"x")
-        ints (map #(Integer/parseInt %) dims)
-        [l w h] ints
-        a1 (* l w)
-        a2 (* l h)
-        a3 (* w h)
+  (let [[l w h] (input->dimensions input)
+        a1 (area l w)
+        a2 (area l h)
+        a3 (area w h)
         extra (min a1 a2 a3)]
     (+ extra (* 2 (+ a1 a2 a3)))))
 
-
 (defn part-2 [input]
-  (let [dims (str/split input #"x")
-        ints (map #(Integer/parseInt %) dims)
-        [l w h] ints
-        p1 (+ l w l w)
-        p2 (+ l h l h)
-        p3 (+ w h w h)
-        volume (* l w h)]
-    (+ volume (min p1 p2 p3))))
+  (let [[l w h] (input->dimensions input)
+        p1 (perimeter l w)
+        p2 (perimeter l h)
+        p3 (perimeter w h)]
+    (+ (volume l w h) (min p1 p2 p3))))
 
 (defn -main [& _]
   (let [data (str/split (slurp (io/resource "2015/day2.txt")) #"\n")]
