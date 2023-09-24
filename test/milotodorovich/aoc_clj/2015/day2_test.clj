@@ -10,7 +10,7 @@
 
 
 (deftest day2-part-2-test
-(testing "day 2 test"
-  (are [input result] (= (day2/part-2 input) result)
-    "2x3x4" 34
-    "1x1x10" 14)))
+  (testing "day 2 test"
+    (are [input result] (= (day2/part-2 input) result)
+      "2x3x4" 34
+      "1x1x10" 14)))
