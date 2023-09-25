@@ -1,5 +1,6 @@
 {:paths ["src" "resources"]
- :deps {org.clojure/clojure {:mvn/version "1.11.1"}}
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        org.clj-commons/digest {:mvn/version "1.4.100"}}
  :aliases
  {:run {:main-opts ["-m" "milotodorovich.aoc-clj"]}
   :build {:deps {io.github.clojure/tools.build
@@ -9,4 +10,4 @@
          :extra-deps {org.clojure/test.check {:mvn/version "1.1.1"}
                       io.github.cognitect-labs/test-runner
                       {:git/tag "v0.5.1" :git/sha "dfb30dd"}}}
-          :main-opts ["-m" "cognitect.test-runner"]}}
+  :main-opts ["-m" "cognitect.test-runner"]}}
