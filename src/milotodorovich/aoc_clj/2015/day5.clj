@@ -45,11 +45,6 @@
        (< 0)))
 
 (defn two-pair-non-overlapping? [input]
-;;   (let [possible-pairs (->> input
-;;                             (seq)
-;;                             (partition 2 1))]
-    ;; (not= (count possible-pairs)
-    ;;       (count (group-by identity possible-pairs))))
    (let [first (first input)
          second (second input)
          first-rest (rest input)
