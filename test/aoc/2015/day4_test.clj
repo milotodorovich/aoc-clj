@@ -1,6 +1,6 @@
-(ns milotodorovich.aoc-clj.2015.day4-test
-  (:require [clojure.test :refer [is are deftest testing]]
-            [milotodorovich.aoc-clj.2015.day4 :as day4]))
+(ns aoc.2015.day4-test
+  (:require [clojure.test :refer [are deftest testing]]
+            [aoc.2015.day4 :as day4]))
 
 (deftest first-md5
   (testing "underlying function"

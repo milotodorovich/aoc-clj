@@ -1,4 +1,4 @@
-(ns milotodorovich.aoc-clj.2015.day5
+(ns aoc.2015.day5
   (:require [clojure.java.io :as io]
             [clojure.string :as str]))
 

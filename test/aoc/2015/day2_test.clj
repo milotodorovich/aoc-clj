@@ -1,6 +1,6 @@
-(ns milotodorovich.aoc-clj.2015.day2-test
+(ns aoc.2015.day2-test
   (:require [clojure.test :refer [deftest are testing]]
-            [milotodorovich.aoc-clj.2015.day2 :as day2]))
+            [aoc.2015.day2 :as day2]))
 
 (deftest day2-part-1-test
   (testing "day 2 test"

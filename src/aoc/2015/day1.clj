@@ -1,4 +1,4 @@
-(ns milotodorovich.aoc-clj.2015.day1
+(ns aoc.2015.day1
   (:require [clojure.java.io :as io]))
 
 (defn part-1 [input]

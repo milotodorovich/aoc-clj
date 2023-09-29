@@ -1,4 +1,4 @@
-(ns milotodorovich.aoc-clj.2015.day3
+(ns aoc.2015.day3
   (:require [clojure.java.io :as io]
             [clojure.set :refer [union]]))
 

@@ -1,4 +1,4 @@
-(ns milotodorovich.aoc-clj.2015.day4
+(ns aoc.2015.day4
   (:require [clj-commons.digest :as digest]
             [clojure.java.io :as io]
             [clojure.string :as str]))
