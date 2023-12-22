@@ -10,6 +10,12 @@ Download from https://github.com/milotodorovich/aoc-clj
 
 FIXME: explanation
 
+Run tests:
+    $ clj -X:test
+
+Run a single namespace:
+    $ clj -M -m aoc.2023.day01
+
 Run the project directly, via `:exec-fn`:
 
     $ clojure -X:run-x

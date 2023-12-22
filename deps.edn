@@ -2,7 +2,7 @@
  :deps {org.clojure/clojure {:mvn/version "1.11.1"}
         org.clj-commons/digest {:mvn/version "1.4.100"}}
  :aliases
- {:run {:main-opts ["-m" "milotodorovich.aoc-clj"]}
+ {:run {:main-opts ["-m" "aoc-clj"]}
   :build {:deps {io.github.clojure/tools.build
                  {:git/tag "v0.9.2" :git/sha "fe6b140"}}
           :ns-default build}
