@@ -1,4 +1,4 @@
-(ns aoc.2023.day01
+(ns aoc.2023.01
   (:require [clojure.java.io :as io]
             [clojure.string :as str]))
 
@@ -34,7 +34,6 @@
                    line->number)]
     output))
 
-
 (defn part-1 [input]
   (->> input
        (str/split-lines)
@@ -47,7 +46,7 @@
        (map line->better-number)
        (reduce +)))
 
-(defn -main [& _]
+(defn run [& _]
   (let [data (-> "2023/day01.txt"
                  (io/resource)
                  (slurp))]
