@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+echo $0
+echo $1
+echo $2
+
+mkdir -p src/aoc/$1
+echo "
+(ns aoc.$1.$2)
+
+(defn part-1 [input]
+  0)
+
+(defn part-2 [input]
+  0)
+
+" >> src/aoc/$1/$2.clj
+
+mkdir -p test/aoc/$1
+echo "
+(ns aoc.$1.$2-test
+  (:require [aoc.$1.$2 :as sut]
+            [clojure.testing :as t]))
+
+(t/deftest part-1-test
+  (t/testing "hello"
+    (t/is (= 1 0))))
+
+(t/deftest part-2-test
+  (t/testing "world"
+    (t/is (= 1 2))))
+
+" >> test/aoc/$1/$2_test.clj
+
+mkdir -p resources/$1
+touch resources/$1/$2.txt
