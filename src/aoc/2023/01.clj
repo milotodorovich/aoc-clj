@@ -47,7 +47,7 @@
        (reduce +)))
 
 (defn run [& _]
-  (let [data (-> "2023/day01.txt"
+  (let [data (-> "2023/01.txt"
                  (io/resource)
                  (slurp))]
     (println "Solving 2023 day 1.")
