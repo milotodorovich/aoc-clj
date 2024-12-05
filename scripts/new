@@ -5,8 +5,11 @@ echo $1
 echo $2
 
 mkdir -p src/aoc/$1
-echo "
-(ns aoc.$1.$2)
+mkdir -p test/aoc/$1
+
+echo "(ns aoc.$1.$2
+  (:require [clojure.java.io :as io]
+            [clojure.string :as str]))
 
 (defn part-1 [input]
   0)
@@ -14,21 +17,29 @@ echo "
 (defn part-2 [input]
   0)
 
+(defn run [& _]
+  (let [data (-> \"$1/$2.txt\"
+                 (io/resource)
+                 (slurp))]
+    (println \"Solving $1 day $2.\")
+    (println (part-1 data))
+    (println (part-2 data))))
+
 " >> src/aoc/$1/$2.clj
 
-mkdir -p test/aoc/$1
-echo "
-(ns aoc.$1.$2-test
+echo "(ns aoc.$1.$2-test
   (:require [aoc.$1.$2 :as sut]
-            [clojure.testing :as t]))
+            [clojure.test :as t]))
+
+(def input \"\")
 
 (t/deftest part-1-test
-  (t/testing "hello"
-    (t/is (= 1 0))))
+  (t/testing 'integration
+    (t/is (= (sut/part-1 input) 0))))
 
 (t/deftest part-2-test
-  (t/testing "world"
-    (t/is (= 1 2))))
+  (t/testing 'integration
+    (t/is (= (sut/part-2 input) 0))))
 
 " >> test/aoc/$1/$2_test.clj
 
