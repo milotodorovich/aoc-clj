@@ -29,12 +29,12 @@
            (some safe?))))
 
 (defn part-1 [input]
-  (->> (str/split input #"\n")
+  (->> (str/split-lines input)
        (filter safe?)
        count))
 
 (defn part-2 [input]
-  (->> (str/split input #"\n")
+  (->> (str/split-lines input)
        (filter tolerant-safe?)
        count))
 
