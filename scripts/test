@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
+clear
+echo `date +"%F %T"`
 clojure -M:test
